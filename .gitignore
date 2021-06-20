@@ -1,0 +1,17 @@
+# npm
+node_modules
+
+# next.js build files
+.next
+
+# environment variables
+.env
+
+# server build files
+dist
+
+# development
+.vscode
+
+# jest
+coverage

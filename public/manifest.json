@@ -1,0 +1,14 @@
+{
+  "name": "Tsxpress Boilerplate",
+  "short_name": "Tsxpress",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "126x126",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

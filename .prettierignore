@@ -1,0 +1,6 @@
+node_modules
+__generated__
+.next
+storybook-static
+coverage
+dist

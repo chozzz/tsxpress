@@ -1,0 +1,82 @@
+/**
+* Extends current bootstrap defaults
+* source: ./node_modules/bootstrap/scss/_variables.scss
+*/
+
+// Base
+$base-line-height: 1.3;
+$base-font-size: 16px;
+
+/*
+    Bootstraps
+*/
+$theme-colors: (
+  'main': $salt-box
+);
+
+// Border radius
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+// Extend bootstrap grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  x2l: 1440px,
+  x3l: 1920px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 992px,
+  x2l: 1140px,
+  x3l: 1410px,
+);
+
+// Extend bootstrap spacers
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 1.875,
+  ),
+  6: (
+    $spacer * 2.5,
+  ),
+  7: (
+    $spacer * 3,
+  ),
+  8: (
+    $spacer * 3.5,
+  ),
+  9: (
+    $spacer * 4,
+  ),
+  10: (
+    $spacer * 4.5,
+  ),
+  11: (
+    $spacer * 5,
+  ),
+  12: (
+    $spacer * 6,
+  ),
+);
+
+$link-color: $salt-box;

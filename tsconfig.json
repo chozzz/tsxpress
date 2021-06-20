@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "downlevelIteration": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "baseUrl": ".",
+        "paths": {
+          "@components/*": ["src/app/components/*"],
+          "@ducks/*": ["src/app/state/ducks/*"],
+          "@models/*": ["src/app/models/*"],
+          "@app/*": ["src/app/*"],
+          "@css/*": ["src/styles/*"],
+          "@assets/*": ["public/static/*"],
+          "@pages/*": ["pages/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules", "cypress/*"]
+  }
+  

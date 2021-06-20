@@ -1,0 +1,108 @@
+.sidenav-toggle-comp {
+  .burger {
+    position: relative;
+    z-index: 101;
+    height: 2em;
+    padding-top: 0.3em;
+
+    .navbar-toggle {
+      background-color: transparent;
+      outline: 0 none;
+      position: relative;
+      border-radius: 0;
+      border: 0 none;
+      display: block;
+      width: 1.7em;
+      padding: 4px;
+
+      .icon-bar {
+        background-color: black;
+        display: block;
+        height: 3px;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        will-change: 'opacity, transform, width, top';
+
+        &:nth-child(1) {
+          width: 100%;
+          top: 0;
+          transition: top 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        }
+
+        &:nth-child(2) {
+          width: 100%;
+          top: .5em;
+          transition: opacity 0.1s ease-out 0.12s;
+        }
+
+        &:nth-child(3) {
+          width: 100%;
+          top: 1em;
+          transition: top 0.1s ease-out 0s, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        }
+      }
+
+      &.expanded {
+        .icon-bar {
+          width: 100%;
+
+          &:nth-child(1) {
+            transform: rotate(225deg);
+            top: 7px;
+          }
+          
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-225deg);
+            top: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  .flying-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(100vw);
+    visibility: hidden;
+    outline: 0 none;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+    &.show {
+      transform: translateX(0vw);
+      visibility: visible;
+      outline: 0 none;
+    }
+
+    .menu {
+      box-shadow: 8px .5px 10px 5px rgba(0, 0, 0, .75);
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 70vw;
+      height: 100vh;
+      max-width: 300px;
+      margin-left: auto;
+      right: 0;
+      padding-top: $header-height-sm;
+      padding-bottom: 1em;
+
+      @include media-breakpoint-up(md) {
+        padding-top: $header-height-md;
+        padding-bottom: 2em;
+      }
+    }
+  }
+}

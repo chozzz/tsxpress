@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "downlevelIteration": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "noEmit": false,
+    "paths": {
+      "@components/*": ["src/app/components/*"],
+      "@ducks/*": ["src/app/state/ducks/*"],
+      "@models/*": ["src/app/models/*"],
+      "@app/*": ["src/app/*"],
+      "@css/*": ["src/styles/*"],
+      "@assets/*": ["public/static/*"],
+      "@pages/*": ["pages/*"]
+    }
+  },
+  "files": ["server/index.ts"],
+  "include": ["server"]
+}

@@ -1,0 +1,127 @@
+
+/**
+* Watch _variables.scss for any tweaks to header's dimension
+*/
+.header-comp {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px -.5em 1em 0px rgba(0, 0, 0, 0.75);
+
+  ~ main {
+    margin-top: $header-height-sm; // Header height
+
+    @include media-breakpoint-up(md) {
+      margin-top: $header-height-md; // Header height
+    }
+  }
+
+  .main-navbar {
+    height: $header-height-sm;
+    transition: height .3s;
+    will-change: height;
+
+    @include media-breakpoint-up(md) {
+      height: $header-height-md; // Header height
+    }
+
+    .navbar-brand {
+      display: block;
+      height: 100%;
+
+      .logo-container  {
+        display: block;
+        height: 100%;
+        padding: 0;
+    
+        .logo {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+
+    .btn-external {
+      font-size: .8em;
+      width: 3.5em;
+      height: 3.5em;
+
+      @include media-breakpoint-up(xl) {
+        font-size: .9em;
+      }
+
+      @include media-breakpoint-up(x2l) {
+        font-size: 1em;
+      }
+    }
+  }
+
+  &.scrolled {
+    .main-navbar {
+      height: $header-height-sm / 1.25;
+  
+      @include media-breakpoint-up(md) {
+        height: $header-height-md / 1.5; // Header height
+      }
+    }
+
+    .sidenav-toggle-comp .burger .navbar-toggle .icon-bar {
+      height: 2px;
+    }
+  }
+
+  .btn-external {
+    display: flex;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    > span {
+      display: none;
+    }
+
+  }
+
+  .nav-item.active {
+    a {
+      color: darken($corduroy, 90%);
+    }
+  }
+
+  .nav-search {
+    justify-content: flex-end;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  ul.navbar-nav {
+    > .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > li {
+      .btn {
+      }
+
+      &:not(:last-child) {
+        margin-right: .75em;
+
+        @include media-breakpoint-up(md) {
+          margin-right: 1em;
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin-right: 1.5em;
+        }
+      }
+    }
+  }
+}
