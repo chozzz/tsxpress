@@ -4,7 +4,7 @@ import { META_DESCRIPTION, META_KEYWORDS, META_TITLE, META_TWITTER, META_URL } f
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <main className="main-container position-relative" data-testid="main-container">
+    <main className="main-container" data-testid="main-container">
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

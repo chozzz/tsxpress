@@ -38,36 +38,16 @@ body {
 		box-shadow: none;
 
 		&:hover, &:focus {
-			color: darken($corduroy, 70%);
+			color: darken($melon, 70%);
 			text-decoration: none;
 		}
 	}
 }
 
 a.link {
-	color: $corduroy;
+	color: $melon;
 
 	&:hover, &:active {
-		color: darken($corduroy, 15%);
-	}
-}
-
-div.auto-grid {
-	&.service-links {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-		gap: 1em;
-	
-		@include media-breakpoint-up(sm) {
-			grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-		}
-	
-		@include media-breakpoint-up(md) {
-			gap: 1.5em;
-		}
-	
-		@include media-breakpoint-up(xl) {
-			gap: 2em;
-		}
+		color: darken($melon, 15%);
 	}
 }

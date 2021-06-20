@@ -11,7 +11,7 @@ $base-font-size: 16px;
     Bootstraps
 */
 $theme-colors: (
-  'main': $salt-box
+  'main': $melon
 );
 
 // Border radius
@@ -78,5 +78,3 @@ $spacers: (
     $spacer * 6,
   ),
 );
-
-$link-color: $salt-box;

@@ -30,8 +30,7 @@
     }
 
     .navbar-brand {
-      display: block;
-      height: 100%;
+      display: inline-block;
 
       .logo-container  {
         display: block;
@@ -44,60 +43,20 @@
         }
       }
     }
-
-    .btn-external {
-      font-size: .8em;
-      width: 3.5em;
-      height: 3.5em;
-
-      @include media-breakpoint-up(xl) {
-        font-size: .9em;
-      }
-
-      @include media-breakpoint-up(x2l) {
-        font-size: 1em;
-      }
-    }
   }
 
-  &.scrolled {
-    .main-navbar {
-      height: $header-height-sm / 1.25;
-  
-      @include media-breakpoint-up(md) {
-        height: $header-height-md / 1.5; // Header height
-      }
+  .nav-link {
+    color: black;
+
+    &:hover {
+      color: lighten(black, 25%);
     }
-
-    .sidenav-toggle-comp .burger .navbar-toggle .icon-bar {
-      height: 2px;
-    }
-  }
-
-  .btn-external {
-    display: flex;
-    border-radius: 50%;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-
-    > span {
-      display: none;
-    }
-
   }
 
   .nav-item.active {
-    a {
-      color: darken($corduroy, 90%);
+    a.nav-link {
+      color: darken($melon, 90%);
     }
-  }
-
-  .nav-search {
-    justify-content: flex-end;
-    width: 100%;
-    padding-left: 2em;
-    padding-right: 2em;
   }
 
   ul.navbar-nav {
@@ -105,23 +64,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    > li {
-      .btn {
-      }
-
-      &:not(:last-child) {
-        margin-right: .75em;
-
-        @include media-breakpoint-up(md) {
-          margin-right: 1em;
-        }
-
-        @include media-breakpoint-up(xl) {
-          margin-right: 1.5em;
-        }
-      }
     }
   }
 }

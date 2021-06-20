@@ -14,6 +14,7 @@
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
 
 // 4. Include any optional Bootstrap components as you like
 @import "~bootstrap/scss/root";
@@ -35,12 +36,11 @@
 // @import "~bootstrap/scss/close";
 // @import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/forms";
-// @import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/helpers";
 // @import "~bootstrap/scss/list-group";
-// @import "~bootstrap/scss/mixins";
 // @import "~bootstrap/scss/modal";
-// @import "~bootstrap/scss/navbar";
-// @import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/nav";
 // @import "~bootstrap/scss/offcanvas";
 // @import "~bootstrap/scss/pagination";
 // @import "~bootstrap/scss/popover";
@@ -50,4 +50,4 @@
 // @import "~bootstrap/scss/toasts";
 // @import "~bootstrap/scss/tooltip";
 // @import "~bootstrap/scss/transitions";
-// @import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities/api";

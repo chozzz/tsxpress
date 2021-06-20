@@ -18,7 +18,7 @@
       .icon-bar {
         background-color: black;
         display: block;
-        height: 3px;
+        height: 2px;
         opacity: 1;
         position: absolute;
         right: 0;
@@ -88,10 +88,10 @@
       background-color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       position: relative;
-      width: 70vw;
+      width: 55vw;
       height: 100vh;
       max-width: 300px;
       margin-left: auto;
