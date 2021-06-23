@@ -20,18 +20,13 @@ const Header: React.FC = () => {
             </Link>
             <ul className="navbar-nav d-none d-lg-flex ms-auto" role="navigation">
               <li className="nav-item">
-                <a href="/" title="Nav #1" aria-label="Nav #1" aria-hidden="false" className="nav-link">
-                  Nav #1
+                <a href="#" title="Home" aria-label="Home" aria-hidden="false" className="nav-link">
+                  Home
                 </a>
               </li>
               <li className="nav-item">
-                <a href="/" title="Nav #2" aria-label="Nav #2" aria-hidden="false" className="nav-link">
-                  Nav #2
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="/" title="Nav #3" aria-label="Nav #3" aria-hidden="false" className="nav-link">
-                  Nav #3
+                <a href="#" title="Other" aria-label="Other" aria-hidden="false" className="nav-link">
+                  Other
                 </a>
               </li>
             </ul>
@@ -39,18 +34,13 @@ const Header: React.FC = () => {
             <SidenavToggleComp className="ms-auto d-lg-none">
               <ul className="nav d-flex flex-column text-end w-100 px-2" role="navigation">
                 <li className="nav-item">
-                  <a href="/" title="Nav #1" aria-label="Nav #1" aria-hidden="false" className="nav-link">
-                    Nav #1
+                  <a href="#" title="Home" aria-label="Home" aria-hidden="false" className="nav-link">
+                    Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="/" title="Nav #2" aria-label="Nav #2" aria-hidden="false" className="nav-link">
-                    Nav #2
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="/" title="Nav #3" aria-label="Nav #3" aria-hidden="false" className="nav-link">
-                    Nav #3
+                  <a href="#" title="Other" aria-label="Other" aria-hidden="false" className="nav-link">
+                    Other
                   </a>
                 </li>
               </ul>

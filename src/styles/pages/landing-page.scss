@@ -1,3 +1,24 @@
 .landing-page {
   display: block;
+
+  section:not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  .title-section {
+    text-align: center;
+  }
+
+  .metas-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 1em;
+    justify-content: center;
+    align-items: start;
+
+    
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(auto-fit, 250px);
+    }
+  }
 }

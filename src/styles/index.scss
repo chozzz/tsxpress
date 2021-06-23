@@ -1,4 +1,7 @@
+// Base variables and utilities, including third-party deps
 @import "app.scss";
+
+// Base styles for this app
 @import "global.scss";
 
 // Layouts
@@ -13,6 +16,3 @@
 @import "./components/navs/sidenav-toggle-comp.scss";
 
 // Components Hocs
-// @import "./components/hocs/";
-
-// Third party

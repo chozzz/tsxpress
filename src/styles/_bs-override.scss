@@ -1,5 +1,5 @@
 /**
-* Extends current bootstrap defaults
+* Override current bootstrap defaults
 * source: ./node_modules/bootstrap/scss/_variables.scss
 */
 
@@ -10,9 +10,9 @@ $base-font-size: 16px;
 /*
     Bootstraps
 */
-$theme-colors: (
-  'main': $melon
-);
+// $theme-colors: (
+//   'main': $melon
+// );
 
 // Border radius
 $border-radius: 0;

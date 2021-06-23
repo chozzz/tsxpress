@@ -1,10 +1,13 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React from "react";
+import axios from "axios";
 
 import { APP_TITLE, APP_URL, META_URL, SOCIAL_FACEBOOK, SOCIAL_IG, SOCIAL_LINKEDIN, SOCIAL_TWITTER } from "@app/utilities/constants";
 import { isBot } from "@app/utilities/helpers";
 import classNames from "classnames";
+import { MetaPlugin } from "@models/MetaPlugin";
+import MetaCard from "@components/cards/MetaCard";
 
 const OrganizationSchema = {
   "@context": "https://schema.org",
@@ -17,9 +20,10 @@ const OrganizationSchema = {
 
 interface IHomepage {
   isCrawler: boolean;
+  metaPlugins: MetaPlugin[];
 }
 
-const Home: NextPage<IHomepage> = ({ isCrawler }: IHomepage) => {
+const Home: NextPage<IHomepage> = ({ isCrawler, metaPlugins }: IHomepage) => {
   const classes = classNames("landing-page", {
     bot: isCrawler,
   });
@@ -42,10 +46,20 @@ const Home: NextPage<IHomepage> = ({ isCrawler }: IHomepage) => {
       </Head>
       <section className="hero">
         <div className="container">
-          <div className="title-wrapper">
-            <h1 className="title"> Tsxpress Boilerplate </h1>
+          <section className="title-section">
+            <h1 className="title"> Tsxpress </h1>
             <p className="tagline">A boileplate to kickstart a project with Typescript, React, NextJS, Webpack and Express.</p>
-          </div>
+          </section>
+          <section className="metas-section">
+            <p className="text-center mb-3">This is built by</p>
+            {metaPlugins && metaPlugins.length && (
+              <div className="metas-card-wrapper">
+                {metaPlugins.map((meta, idx) => {
+                  return <MetaCard data={meta} key={idx} />;
+                })}
+              </div>
+            )}
+          </section>
         </div>
       </section>
     </div>
@@ -54,8 +68,10 @@ const Home: NextPage<IHomepage> = ({ isCrawler }: IHomepage) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const uA = (req?.headers && req.headers["user-agent"]) || "",
+    metaJson = require("../public/meta.json"),
     result: IHomepage = {
       isCrawler: isBot(uA),
+      metaPlugins: metaJson?.plugins as MetaPlugin[],
     };
 
   return {
