@@ -38,7 +38,7 @@ Followed by `npm run start` to run the built repository that are in your `/dist`
   - Strongly recommended to style with classes instead of tags or attributes.
   - Use only **lowercase alphanumeric, dash and underscore** when declaring a class styles,
   - Make use of [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) to style components. Feel free to use or import mixins as webpack will remove anything that is unused.
-  - **Do NOT** append styles dynamically. Unless the name is in [purgecss safelist](config/webpack.config.js)
+  - **Do NOT** append styles dynamically. Unless the name is in [purgecss safelist](/postcss.config.js)
 
 
   ```tsx
